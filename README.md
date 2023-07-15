@@ -33,7 +33,19 @@ Any form of security testing done through web scraping automatically yeilds to d
 In the OWSAP world of web applcation attacks, if you just look statistically at how many platforms are supported 
 in their account creation by Google accounts, you'd be shocked and yet not surprised since you already knew Google 
 to be the biggest big data collector :)
-Test the security posture of an organization's 
+
+Test the security posture of an organization's http session load balancing protection with HTTP Session DDOS. 
+Large organizations will usually place load balancers as the first public facing IP of an FQDN, so that sessions and 
+requests can be properly streamed to ensure low latency. The reverse of this inclination for proper functioning 
+is a DDOS attack, so sessions are open forcing the servers to accept them and if the speed of the requests along side
+the amount of the connections (associated of course with some IP proxying so that you won't get blocked by a predictable
+WAF rule) trumps the load balancing capacity/architecture for request management, then the application will get delayed
+intensively, or crash. 
+
+The benefit of implementing this as a security research measure towards an organization with written consent as per 
+cyber security consulting, is that organization anit-DDOS measures/implementations can be tested in real time, just like 
+any other offensive security research initiative, where vulnerabilities and weaknesses are elucidated for cyber posture
+improvement.
 
 
 # - Reminder
