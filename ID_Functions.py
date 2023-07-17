@@ -14,39 +14,52 @@ from faker import Faker
 #############
 # Credentials
 #############
-def person() -> dict :
-    # creating fake instance
-    fake = Faker()
-    # Creating three person templates
-    templates = [
-        { # Male
-        "First_Name" : fake.first_name_male(),
-        "Last_Name" : fake.last_name(),
-        "Gender" : "Male"
-        },
-        { # Female
-        "First_Name" : fake.first_name_female(),
-        "Last_Name" : fake.last_name(),
-        "Gender" : "Female"
-        },
-        {# Gen Z
-        "First_Name" : fake.first_name(),
-        "Last_Name" : fake.last_name(),
-        "Gender" : "Rather not say"
-        }
-    ]
-  # Returns 1/3 possible person dictionary objects
-    person = random.choice(templates)
-    return person
+class person:
+    def __init__(self) -> None:
+        # - Creating fake instance
+        self.fake = Faker()
 
+        # - Creating three person templates [Type: List[Dict]]
+        self.templates = [
+            { # Male
+            "First_Name" : self.fake.first_name_male(),
+            "Last_Name" : self.fake.last_name(),
+            "Gender" : "Male"
+            },
+            { # Female
+            "First_Name" :self. fake.first_name_female(),
+            "Last_Name" : self.fake.last_name(),
+            "Gender" : "Female"
+            },
+            {# Gen Z
+            "First_Name" :self. fake.first_name(),
+            "Last_Name" : self.fake.last_name(),
+            "Gender" : "Rather not say"
+            }
+        ]
+
+    def male(self) -> dict:
+        # Returns male person template
+        male = self.templates[0]
+        return male
+
+    def female(self) -> dict:
+        # Returns female person template
+        female = self.templates[1]
+        return female
+    
+    def gen_z(self) -> dict:
+        # Returns gen-z person template
+        gen_z = self.templates[2]
+        return gen_z
 
 
 #####################   
 # USERNAME & PASSWORD
 #####################
-def username_password(name_object) -> dict:
-    first_name = name_object.get("First_Name", "")
-    last_name = name_object.get("Last_Name", "")
+def username_password(template) -> dict:
+    first_name = template["First_Name"]
+    last_name = template["Last_Name"]
     
 
     password = ''.join(random.choices(string.ascii_letters + string.digits, k=12))
