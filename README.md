@@ -30,11 +30,27 @@ Navigate to the project directory in your terminal: cd <path-to-project>.
 
 Run the script with the desired arguments. Here are some examples:
 
-To generate 10 random IDs, run: python Google-ID-Generator.py --random 10
+* To generate 10 random IDs, run: python Google-ID-Generator.py --random 10
 
-To generate 5 male IDs and 7 female IDs, run: python Google-ID-Generator.py --male 5 --female 7
+* To generate 5 male IDs and 7 female IDs, run: python Google-ID-Generator.py --male 5 --female 7
 
-To generate 5 male IDs and export them to a JSON file, run: python Google-ID-Generator.py --male 5 --output filename.json
+* To generate 5 male IDs and export them to a JSON file, run: python Google-ID-Generator.py --male 5 --output filename.json
+
+
+
+The screenshot below showcases the terminal output for:
+
+python Google-ID-Generator.py --male 10 --female 8 --random 13 --output ./ID's.json
+
+![image](https://github.com/Jonathan-D-a-v-i-d/Google-ID-Generater/assets/44530894/6dee314c-2dea-4baf-bd7e-177ce614c20f)
+
+
+ID's.json comes out like this:
+
+![image](https://github.com/Jonathan-D-a-v-i-d/Google-ID-Generater/assets/44530894/518f53f1-2e7f-4fd3-9064-e8a71916f817)
+
+
+
 
 Here is the full list of command-line arguments that you can use:
 
