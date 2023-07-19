@@ -16,6 +16,7 @@ The following Python libraries installed on your system:
 * tqdm: This library is used for progress bar generation.
 * colorama: This library is used for colorful command line outputs.
 * json: This library is used for generating the final output as a JSON file.
+  
 If these libraries are not installed, you can install them via pip by running:
 pip install faker argparse art tqdm colorama json in your CLI.
 
